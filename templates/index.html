@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html>
+  <body>
+    <form method="post">
+      <textarea name="urls" rows="5" cols="50" placeholder="Enter URLs, one per line"></textarea><br>
+      <input type="submit" value="Scrape">
+    </form>
+
+    {% if data %}
+      <h2>Results</h2>
+      <ul>
+        {% for item in data %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </body>
+</html>
